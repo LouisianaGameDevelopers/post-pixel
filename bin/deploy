@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# https://github.com/thoughtbot/suspenders/blob/master/templates/bin_deploy
+# Run this script to deploy the app to Heroku.
+
+set -e
+
+branch="$(git symbolic-ref HEAD --short)"
+# target="${1:-staging}"
+target="staging"
+
+git push "$target" "$branch:master"
+heroku run rails db:migrate --exit-code --remote "$target"
+heroku restart --remote "$target"

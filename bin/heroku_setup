@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+appname=$1
+
+heroku app:create "$appname-staging" -r staging
+heroku app:create "$appname-production" -r production
+
+heroku addons:create heroku-postgresql:hobby-dev -r staging
+heroku addons:create heroku-postgresql:hobby-dev -r production
+
+heroku pipelines:create "$appname"
+heroku pipelines:add -a "$appname" -r staging -s staging
+heroku pipelines:add -a "$appname" -r production -s production
+

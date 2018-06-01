@@ -1,0 +1,52 @@
+/* stylelint-disable */
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
+
+:root {
+  --bun: #ece1c3;
+  --tomato: #eb4a43;
+}
+
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+h1 {
+  font: 400 4rem/1 'Chewy';
+}
+
+code {
+  background-color: --bun;
+  border-radius: 3px;
+  opacity: 0.8;
+  padding: 0.5rem 0.5rem 0.3rem;
+  transition: opacity 0.2s;
+}
+
+code:hover {
+  opacity: 1;
+}
+
+small {
+  bottom: 4rem;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+small a {
+  border-bottom: 1px solid;
+  color: rgba(0, 0, 0, 0.6);
+  color: --tomato;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+small a:hover {
+  opacity: 0.7;
+}
