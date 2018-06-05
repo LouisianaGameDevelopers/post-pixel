@@ -4,11 +4,24 @@ set -e
 
 appname=$1
 
-heroku apps:create $appname-staging -r staging
-heroku apps:create $appname-production -r production
+# Create Heroku apps
+heroku apps:create $appname-staging
+heroku apps:create $appname-production --no-remote
 
-heroku addons:create heroku-postgresql:hobby-dev -r staging
-heroku addons:create heroku-postgresql:hobby-dev -r production
+# Set apps up in deployment pipeline
+heroku pipelines:create $appname --app $appname-staging    --stage staging
+heroku pipelines:add    $appname --app $appname-production --stage production
 
-heroku pipelines:create $appname -a $appname-staging -s staging
-heroku pipelines:add $appname -a $appname-production -s production
+# Attach Heroku Postgres instances
+heroku addons:create heroku-postgresql:hobby-dev --app $appname-staging
+heroku addons:create heroku-postgresql:hobby-dev --app $appname-production
+
+# Add additional buildpacks for Node.js-based asset compilation
+heroku buildpacks:clear --app $appname-staging
+heroku buildpacks:clear --app $appname-production
+
+heroku buildpacks:set heroku/nodejs --app $appname-staging    --index 1
+heroku buildpacks:set heroku/nodejs --app $appname-production --index 1
+
+heroku buildpacks:set heroku/ruby --app $appname-staging    --index 2
+heroku buildpacks:set heroku/ruby --app $appname-production --index 2
