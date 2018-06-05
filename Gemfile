@@ -12,6 +12,7 @@ gem "rubocop", require: false
 gem "trestle"
 gem "trestle-simplemde"
 gem "turbolinks", "~> 5"
+gem "uglifier"
 
 group :development, :test do
   gem "bundler-audit", ">= 0.5.0", require: false
