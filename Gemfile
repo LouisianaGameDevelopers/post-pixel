@@ -2,7 +2,6 @@
 
 source "https://rubygems.org"
 
-gem "breakfast"
 gem "devise"
 gem "jbuilder", "~> 2.5"
 gem "pg", "~> 0.18"
@@ -13,6 +12,7 @@ gem "trestle"
 gem "trestle-simplemde"
 gem "turbolinks", "~> 5"
 gem "uglifier"
+gem "webpacker", "~> 3.5"
 
 group :development, :test do
   gem "bundler-audit", ">= 0.5.0", require: false

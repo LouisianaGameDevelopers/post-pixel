@@ -13,16 +13,14 @@
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
-/yarn-error.log
-
 .byebug_history
-# Added by Breakfast Gem
-yarn-error.log
-npm-debug.log
-node_modules/*
-public/assets/*
 
 .tern-port
 .DS_Store
 .envrc
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+yarn-error.log
+.yarn-integrity
