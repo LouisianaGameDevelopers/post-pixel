@@ -137,6 +137,7 @@ body::after {
 }
 
 .btn.is-hovered,
+.btn:active,
 .btn:focus {
   @apply .text-white .bg-black .antialiased;
 }
