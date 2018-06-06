@@ -4,11 +4,11 @@ source "https://rubygems.org"
 
 gem "delayed_job_active_record"
 gem "devise"
+gem "haml-rails", "~> 1.0"
 gem "jbuilder", "~> 2.5"
 gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.2.0"
-gem "rubocop", require: false
 gem "trestle"
 gem "trestle-simplemde"
 gem "turbolinks", "~> 5"
@@ -34,6 +34,7 @@ group :development do
   gem "letter_opener"
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "rack-livereload"
+  gem "rubocop", require: false
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"

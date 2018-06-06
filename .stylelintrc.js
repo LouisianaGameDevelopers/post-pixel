@@ -2,6 +2,7 @@ module.exports = {
   extends: 'stylelint-config-standard',
   plugins: ['stylelint-order'],
   rules: {
+    'at-rule-no-unknown': [true, { ignoreAtRules: ['tailwind', 'apply'] }],
     'order/order': ['custom-properties', 'declarations'],
     'order/properties-order': [
       'display',

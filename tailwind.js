@@ -1,6 +1,7 @@
 let colors = {
   transparent: 'transparent',
   black: '#111',
+  white: '#fff',
   yellow: '#eaff6d'
 };
 

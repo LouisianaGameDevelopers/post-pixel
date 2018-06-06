@@ -13,8 +13,8 @@ guard "livereload" do
   extensions.each do |ext, type|
     watch(%r{
           (?:app|vendor)
-          (?:/assets/\w+/(?<path>[^.]+)
-           (?<ext>\.#{ext})) # matching extension (must be first encountered)
+          (?:/frontend/\w+/(?<path>[^.]+)
+           (?<ext>\.#{ext}))
           (?:\.\w+|$)
           }x) do |m|
       path = m[1]

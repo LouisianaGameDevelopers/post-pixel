@@ -1,0 +1,23 @@
+.first.flex.items-center.justify-center.w-screen.h-screen.uppercase
+  %div
+    .relative
+      .post-pixel
+        %h1
+          %span.post
+            Post-
+            %span
+          %span.pixel
+            Pixel
+            %span
+        %p.tag
+          An Interactive
+          %br
+          Art Showcase
+
+      %img.logo{alt: "LAGD", src: "#{asset_pack_path "images/lagd.svg"}"}
+
+    .choose.text-center
+      %h2.mb-6 Choose your path:
+      .choices.flex.justify-center
+        %a#attend.btn.mr-4{href: "https://www.eventbrite.com/e/post-pixel-an-interactive-art-showcase-tickets-46587132367"} Attend
+        %a#submit.btn.ml-4{href: "https://goo.gl/forms/ZM0DfsjYUiwNJWey1"} Submit
