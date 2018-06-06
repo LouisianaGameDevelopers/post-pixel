@@ -83,4 +83,4 @@ production:
   <<: *default
   database: post_pixel_production
   username: post_pixel
-  password: <%= ENV['BOXCAR_DATABASE_PASSWORD'] %>
+  password: <%= ENV['POST_PIXEL_DATABASE_PASSWORD'] %>
