@@ -67,7 +67,7 @@ body::after {
   z-index: 3;
   top: 0;
   left: 0;
-  font: 900 124px/0.83 'Montserrat';
+  font: 900 90px/0.83 'Montserrat';
   color: var(--black);
 }
 
@@ -115,19 +115,20 @@ body::after {
 .tag {
   display: block;
   margin: 10px 0 0 50px;
-  font: 30px/1.1 'Knewave';
+  font: 20px/1.1 'Knewave';
 }
 
 .logo {
-  width: 70px;
+  width: 50px;
   position: absolute;
   right: 20px;
-  bottom: 70px;
+  bottom: 50px;
 }
 
 .choose h2 {
   margin-top: 5rem;
-  text-shadow: 0 0 1px var(--black);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--black);
 }
 
 .btn {
@@ -140,4 +141,20 @@ body::after {
 .btn:active,
 .btn:focus {
   @apply .text-white .bg-black .antialiased;
+}
+
+@media (min-width: 992px) {
+  .post,
+  .pixel {
+    font-size: 124px;
+  }
+
+  .tag {
+    font-size: 30px;
+  }
+
+  .logo {
+    width: 70px;
+    bottom: 70px;
+  }
 }
