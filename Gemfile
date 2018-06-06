@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+gem "delayed_job_active_record"
 gem "devise"
 gem "jbuilder", "~> 2.5"
 gem "pg", "~> 0.18"
