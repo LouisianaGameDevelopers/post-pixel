@@ -104,11 +104,9 @@ body::after {
   opacity: 0.53;
 }
 
-.post {
-  span {
-    width: 88%;
-    transform: rotate(2deg);
-  }
+.post span {
+  width: 88%;
+  transform: rotate(2deg);
 }
 
 .pixel span {
